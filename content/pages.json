@@ -1,0 +1,260 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "path": "index.html",
+      "title": "TAMU HOSA | Future Health Professionals",
+      "metaDescription": "TAMU HOSA is the Texas A&M chapter of HOSA - Future Health Professionals, empowering members to become leaders in the global health community.",
+      "sections": [
+        {
+          "type": "heroBig",
+          "kicker": "TAMU HOSA",
+          "heading": "Future Health Professionals",
+          "lede": "HOSA (Future Health Professionals) empowers members to become leaders in the global health community through education, collaboration, and experience.",
+          "buttons": [
+            { "label": "Join HOSA", "href": "membership.html", "style": "solid" },
+            { "label": "Explore Competitions", "href": "competitions.html", "style": "outline" }
+          ]
+        },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Who We Are",
+          "title": "A Pre-Health Community at Texas A&M",
+          "lede": "TAMU HOSA connects pre-health students through competitive events, service, and community — building the skills and network needed for a career in healthcare.",
+          "cards": [
+            { "tag": "Compete", "title": "Competitions", "body": "Test your knowledge and skills at state and international HOSA competitive events across dozens of health-science categories.", "link": "competitions.html", "pillar": "teal" },
+            { "tag": "Join", "title": "Membership", "body": "General meetings, dues, member points, and everything you need to get involved with the chapter.", "link": "membership.html", "pillar": "maroon" },
+            { "tag": "Serve", "title": "Community Service", "body": "Give back through service projects like our NMDP marrow-registry drive and other community health initiatives.", "link": "membership/nmdp.html", "pillar": "none" }
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "eyebrow": "Get Involved",
+          "title": "Ready to Join?",
+          "lede": "Whether you're aiming for competition or just want a pre-health community, there's a place for you in TAMU HOSA.",
+          "alt": true,
+          "buttons": [
+            { "label": "Membership Info", "href": "membership.html" },
+            { "label": "Upcoming Events", "href": "events.html" },
+            { "label": "Contact Us", "href": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events",
+      "path": "events.html",
+      "title": "Upcoming Events | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Upcoming Events", "lede": "General meetings, service projects, and competition prep — all in one place." },
+        {
+          "type": "eventList",
+          "eyebrow": "Mark Your Calendar",
+          "title": "This Semester",
+          "lede": "Dates and details below are placeholders. The full event calendar is coming soon.",
+          "note": "Check back for updates.",
+          "events": [
+            { "month": "TBD", "day": "?", "title": "General Meeting", "meta": "Where: TBD  •  Time: TBD", "body": "Placeholder listing for a biweekly general meeting. Real schedule coming soon." },
+            { "month": "TBD", "day": "?", "title": "Competition Prep Workshop", "meta": "Where: TBD  •  Time: TBD", "body": "Placeholder listing for a study/practice session ahead of a competitive event." },
+            { "month": "TBD", "day": "?", "title": "NMDP Registry Drive", "meta": "Where: TBD  •  Time: TBD", "body": "Placeholder listing for our community marrow-registry service project. See the NMDP page for details." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "competitions",
+      "path": "competitions.html",
+      "title": "Competition | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Competition", "lede": "Compete at the state and international level across dozens of health-science categories." },
+        {
+          "type": "cardGrid",
+          "eyebrow": "How It Works",
+          "title": "HOSA Competitive Events",
+          "lede": "Members qualify at the chapter level, advance to the Texas HOSA State Leadership Conference, and top finishers can go on to the International Leadership Conference (ILC).",
+          "cards": [
+            { "tag": "Category", "title": "Health Science Events", "body": "Tests of knowledge and clinical skill across topics like Medical Terminology, Anatomy & Physiology, and Pharmacology. Placeholder — specific events TBD.", "link": "", "pillar": "teal" },
+            { "tag": "Category", "title": "Health Professions Events", "body": "Hands-on skill demonstrations such as CPR/First Aid and Medical Assisting. Placeholder — specific events TBD.", "link": "", "pillar": "teal" },
+            { "tag": "Category", "title": "Leadership Events", "body": "Events focused on communication, teamwork, and leadership development. Placeholder — specific events TBD.", "link": "", "pillar": "teal" },
+            { "tag": "Category", "title": "Emerging Health Professions", "body": "Events covering newer and technology-driven areas of healthcare. Placeholder — specific events TBD.", "link": "", "pillar": "none" }
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "eyebrow": "Get Started",
+          "title": "How to Get Involved",
+          "lede": "Placeholder guidance: join as a member, attend a competition info session, pick an event category that fits your interests, and start practicing with our officer team. Full details coming soon.",
+          "alt": true,
+          "buttons": [
+            { "label": "Become a Member", "href": "membership.html" },
+            { "label": "Ask a Question", "href": "contact.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "membership",
+      "path": "membership.html",
+      "title": "Membership | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Membership", "lede": "Everything you need to get involved with TAMU HOSA." },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Get Started",
+          "title": "Membership Resources",
+          "lede": "Meeting schedule, dues, member points, and our NMDP service project — all in one place.",
+          "cards": [
+            { "tag": "Attend", "title": "General Meetings", "body": "We meet biweekly. See the placeholder schedule and location details.", "link": "membership/meetings.html", "pillar": "teal" },
+            { "tag": "Pay", "title": "Dues (Flywire)", "body": "Membership dues are collected through Flywire. Placeholder instructions and link.", "link": "membership/flywire.html", "pillar": "maroon" },
+            { "tag": "Track", "title": "Member Points", "body": "Learn how involvement and attendance are tracked through our points system.", "link": "membership/points.html", "pillar": "teal" },
+            { "tag": "Serve", "title": "NMDP Service Project", "body": "Our chapter's community service project with the National Marrow Donor Program.", "link": "membership/nmdp.html", "pillar": "none" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "path": "contact.html",
+      "title": "Contact & FAQs | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Contact & FAQs", "lede": "Questions about TAMU HOSA? Start here, or reach out directly." },
+        {
+          "type": "faqList",
+          "eyebrow": "FAQs",
+          "title": "Frequently Asked Questions",
+          "items": [
+            { "q": "Who can join TAMU HOSA?", "a": "Placeholder answer: any Texas A&M student interested in health professions is welcome to join, regardless of major. Full eligibility details TBD." },
+            { "q": "Do I need experience to compete?", "a": "Placeholder answer: no prior competition experience is required. Officers help members choose an event and prepare. TBD." },
+            { "q": "How much are dues and how do I pay?", "a": "Placeholder answer: dues are collected through Flywire. See the Dues page for details once finalized." },
+            { "q": "How do I stay updated on meetings and events?", "a": "Placeholder answer: join our GroupMe and check the Events page for the latest schedule. GroupMe link TBD." }
+          ]
+        },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Reach Out",
+          "title": "Contact Us",
+          "lede": "",
+          "layout": "info",
+          "alt": true,
+          "cards": [
+            { "tag": "Email", "title": "tamuhosa@example.com", "body": "Placeholder — real chapter email TBD.", "link": "mailto:tamuhosa@example.com", "pillar": "none" },
+            { "tag": "GroupMe", "title": "GroupMe link coming soon", "body": "", "link": "", "pillar": "none" },
+            { "tag": "Location", "title": "Texas A&M Campus", "body": "", "link": "", "pillar": "none" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "officers",
+      "path": "officers.html",
+      "title": "Officers | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Meet the Officers", "lede": "Officer photos coming soon." },
+        {
+          "type": "officerGrid",
+          "officers": [
+            { "name": "Kavin Saravanan", "role": "President", "initials": "KS", "photo": "" },
+            { "name": "Joselynn Lugo", "role": "Vice President", "initials": "JL", "photo": "" },
+            { "name": "Samantha Wong", "role": "Secretary", "initials": "SW", "photo": "" },
+            { "name": "Esha Gupta", "role": "Treasurer", "initials": "EG", "photo": "" },
+            { "name": "Pranav Rajesh", "role": "Social Chair", "initials": "PR", "photo": "" },
+            { "name": "Arshi Maniar", "role": "Public Outreach", "initials": "AM", "photo": "" },
+            { "name": "Paresh Chotaliya", "role": "Recruitment Chair", "initials": "PC", "photo": "" },
+            { "name": "Rylan Lathrop", "role": "Volunteer Chair", "initials": "RL", "photo": "" },
+            { "name": "Ambar Raj", "role": "Publicist", "initials": "AR", "photo": "" },
+            { "name": "Isha Sudheer", "role": "Competition Chair", "initials": "IS", "photo": "" },
+            { "name": "Chaitali Padidem", "role": "Fundraising Chair", "initials": "CP", "photo": "" },
+            { "name": "Sanjana Reka", "role": "Fundraising Chair", "initials": "SR", "photo": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "membership-meetings",
+      "path": "membership/meetings.html",
+      "title": "Meetings | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "General Meetings", "lede": "Our chapter meets biweekly during the fall and spring semesters." },
+        {
+          "type": "eventList",
+          "eyebrow": "Schedule",
+          "title": "Meeting Info",
+          "lede": "Placeholder schedule below. Real meeting times and locations will be posted here once finalized.",
+          "note": "Check back for updates.",
+          "events": [
+            { "month": "TBD", "day": "?", "title": "Biweekly General Meeting", "meta": "Where: TBD  •  Time: TBD", "body": "General meetings cover chapter updates, competition prep, and guest speakers. Placeholder — day/time/location TBD." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "membership-flywire",
+      "path": "membership/flywire.html",
+      "title": "Dues (Flywire) | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Dues & Payment", "lede": "Membership dues are collected securely through Flywire." },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Placeholder",
+          "title": "How to Pay",
+          "lede": "Dues amount, payment window, and the Flywire payment link are still being finalized. This page will be updated with real instructions.",
+          "layout": "info",
+          "cards": [
+            { "tag": "Amount", "title": "TBD", "body": "", "link": "", "pillar": "none" },
+            { "tag": "Deadline", "title": "TBD", "body": "", "link": "", "pillar": "none" },
+            { "tag": "Payment Link", "title": "Flywire link coming soon", "body": "", "link": "", "pillar": "none" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "membership-nmdp",
+      "path": "membership/nmdp.html",
+      "title": "NMDP Service Project | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "NMDP Service Project", "lede": "Partnering with the National Marrow Donor Program to save lives." },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Community Service",
+          "title": "What Is NMDP?",
+          "lede": "The National Marrow Donor Program (NMDP) connects patients with life-saving bone marrow and blood stem cell donors. TAMU HOSA partners with NMDP to host registry drives on campus.",
+          "note": "Next NMDP drive date TBD — check back for updates.",
+          "cards": [
+            { "tag": "Register", "title": "Join the Registry", "body": "Placeholder: eligible students can join the donor registry with a simple cheek swab at our drives.", "link": "", "pillar": "maroon" },
+            { "tag": "Volunteer", "title": "Help Run a Drive", "body": "Placeholder: members can earn service hours and points by volunteering at NMDP registry events.", "link": "", "pillar": "teal" },
+            { "tag": "Learn", "title": "Spread Awareness", "body": "Placeholder: help educate the campus community about the impact of the bone marrow registry.", "link": "", "pillar": "none" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "membership-points",
+      "path": "membership/points.html",
+      "title": "Member Points | TAMU HOSA",
+      "metaDescription": "",
+      "sections": [
+        { "type": "pageHero", "heading": "Member Points", "lede": "How we track involvement and attendance across the chapter." },
+        {
+          "type": "cardGrid",
+          "eyebrow": "System",
+          "title": "How Points Work",
+          "lede": "TAMU HOSA uses a member points system to recognize involvement in meetings, service, and fundraising. Full point values and requirements are still being finalized.",
+          "note": "Full point breakdown and minimum requirements coming soon.",
+          "cards": [
+            { "tag": "Attendance", "title": "General Meetings", "body": "Placeholder point value for attending biweekly general meetings.", "link": "", "pillar": "teal" },
+            { "tag": "Service", "title": "Community Service", "body": "Placeholder point value for participating in service projects like NMDP.", "link": "", "pillar": "teal" },
+            { "tag": "Involvement", "title": "Competitions & Events", "body": "Placeholder point value for competing or helping run chapter events.", "link": "", "pillar": "maroon" }
+          ]
+        }
+      ]
+    }
+  ]
+}

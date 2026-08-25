@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "TAMU HOSA",
+    "affiliation": "Texas A&M"
+  },
+  "colors": {
+    "maroon": "#500000",
+    "maroonDark": "#350000",
+    "maroonDeep": "#2b0000",
+    "navy": "#0065A5",
+    "navyDark": "#004C7C",
+    "ink": "#16222e",
+    "cream": "#f4f7f8",
+    "paper": "#e9eff1",
+    "warmWhite": "#ffffff",
+    "gray": "#5d6b74",
+    "grayLight": "#8996a0",
+    "border": "#d7e0e4",
+    "borderStrong": "#bccbd1"
+  },
+  "nav": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "Events", "href": "events.html" },
+    { "label": "Competitions", "href": "competitions.html" },
+    {
+      "label": "Membership",
+      "dropdown": [
+        { "label": "Meetings", "href": "membership/meetings.html" },
+        { "label": "Dues (Flywire)", "href": "membership/flywire.html" },
+        { "label": "Member Points", "href": "membership/points.html" },
+        { "label": "NMDP Service Project", "href": "membership/nmdp.html" }
+      ]
+    },
+    { "label": "Officers", "href": "officers.html" },
+    { "label": "Contact", "href": "contact.html", "cta": true }
+  ],
+  "footer": {
+    "tagline": "The Texas A&M chapter of HOSA — Future Health Professionals. Building leaders in the global health community through education, collaboration, and experience.",
+    "copyright": "© 2026 TAMU HOSA. All rights reserved.",
+    "columns": [
+      {
+        "heading": "Explore",
+        "links": [
+          { "label": "Events", "href": "events.html" },
+          { "label": "Competitions", "href": "competitions.html" },
+          { "label": "Membership", "href": "membership.html" },
+          { "label": "Officers", "href": "officers.html" }
+        ]
+      },
+      {
+        "heading": "Membership",
+        "links": [
+          { "label": "Meetings", "href": "membership/meetings.html" },
+          { "label": "Dues", "href": "membership/flywire.html" },
+          { "label": "Points", "href": "membership/points.html" },
+          { "label": "NMDP", "href": "membership/nmdp.html" }
+        ]
+      }
+    ]
+  }
+}

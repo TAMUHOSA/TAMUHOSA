@@ -1,0 +1,193 @@
+backend:
+  name: github
+  repo: TAMUHOSA/TAMUHOSA
+  branch: main
+  base_url: https://tamuhosa-oauth.rylanlat.workers.dev
+  auth_endpoint: auth
+
+publish_mode: simple
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Colors, Nav & Footer"
+        file: "content/site.json"
+        fields:
+          - { label: "Chapter Name", name: "brand", widget: object, fields: [
+              { label: "Name", name: "name", widget: string },
+              { label: "Affiliation line (small text under the name)", name: "affiliation", widget: string }
+            ] }
+          - label: "Colors"
+            name: "colors"
+            widget: object
+            fields:
+              - { label: "Primary color (headers, hero, buttons)", name: "maroon", widget: color, allowInput: true }
+              - { label: "Primary color — dark shade (hover states)", name: "maroonDark", widget: color, allowInput: true }
+              - { label: "Primary color — deepest shade (gradients, footer)", name: "maroonDeep", widget: color, allowInput: true }
+              - { label: "Accent color (links, highlights)", name: "navy", widget: color, allowInput: true }
+              - { label: "Accent color — dark shade (hover states)", name: "navyDark", widget: color, allowInput: true }
+              - { label: "Body text color", name: "ink", widget: color, allowInput: true }
+              - { label: "Page background", name: "cream", widget: color, allowInput: true }
+              - { label: "Section background (alternating sections)", name: "paper", widget: color, allowInput: true }
+              - { label: "Card/button background (usually white)", name: "warmWhite", widget: color, allowInput: true }
+              - { label: "Muted text color", name: "gray", widget: color, allowInput: true }
+              - { label: "Lighter muted text color", name: "grayLight", widget: color, allowInput: true }
+              - { label: "Border color", name: "border", widget: color, allowInput: true }
+              - { label: "Stronger border color", name: "borderStrong", widget: color, allowInput: true }
+          - label: "Navigation Menu"
+            name: "nav"
+            widget: list
+            hint: "The links across the top of every page. To link to a page you added below, use page.html?slug=your-slug — otherwise use the page's own file, like events.html."
+            fields:
+              - { label: "Label", name: "label", widget: string }
+              - { label: "Link (leave blank if this is a dropdown)", name: "href", widget: string, required: false }
+              - { label: "Highlight as a button (used for one item, like Contact)", name: "cta", widget: boolean, required: false, default: false }
+              - label: "Dropdown items (leave empty for a plain link)"
+                name: "dropdown"
+                widget: list
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: string }
+                  - { label: "Link", name: "href", widget: string }
+          - label: "Footer"
+            name: "footer"
+            widget: object
+            fields:
+              - { label: "Tagline (under the chapter name)", name: "tagline", widget: text }
+              - { label: "Copyright line", name: "copyright", widget: string }
+              - label: "Footer link columns"
+                name: "columns"
+                widget: list
+                fields:
+                  - { label: "Column heading", name: "heading", widget: string }
+                  - label: "Links"
+                    name: "links"
+                    widget: list
+                    fields:
+                      - { label: "Label", name: "label", widget: string }
+                      - { label: "Link", name: "href", widget: string }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "pages"
+        label: "All Pages"
+        file: "content/pages.json"
+        fields:
+          - label: "Pages"
+            name: "pages"
+            widget: list
+            hint: "One entry per page on the site. Delete an entry to remove that page. For a brand-new page, set its Path to page.html and give it a unique Slug — it will live at page.html?slug=your-slug. Don't forget to also add it to the Navigation Menu or a Footer column in Site Settings so people can find it."
+            fields:
+              - { label: "Slug (short id, no spaces, e.g. sponsors)", name: "slug", widget: string }
+              - { label: "Path (the page's file — leave as page.html for a new page)", name: "path", widget: string }
+              - { label: "Browser tab title", name: "title", widget: string, required: false }
+              - { label: "Search description", name: "metaDescription", widget: string, required: false }
+              - label: "Sections"
+                name: "sections"
+                widget: list
+                hint: "The blocks that make up this page, top to bottom. Add, remove, and reorder freely."
+                types:
+                  - label: "Big Hero (homepage-style banner)"
+                    name: "heroBig"
+                    widget: object
+                    fields:
+                      - { label: "Kicker (small label above the heading)", name: "kicker", widget: string }
+                      - { label: "Heading", name: "heading", widget: string }
+                      - { label: "Subtext", name: "lede", widget: text }
+                      - label: "Buttons"
+                        name: "buttons"
+                        widget: list
+                        fields:
+                          - { label: "Button text", name: "label", widget: string }
+                          - { label: "Link", name: "href", widget: string }
+                          - { label: "Style", name: "style", widget: select, options: ["solid", "outline"], default: "solid" }
+                  - label: "Page Hero (simple heading banner)"
+                    name: "pageHero"
+                    widget: object
+                    fields:
+                      - { label: "Heading", name: "heading", widget: string }
+                      - { label: "Subtext", name: "lede", widget: text }
+                  - label: "Card Grid"
+                    name: "cardGrid"
+                    widget: object
+                    fields:
+                      - { label: "Eyebrow (small label above the title)", name: "eyebrow", widget: string, required: false }
+                      - { label: "Title", name: "title", widget: string, required: false }
+                      - { label: "Subtext", name: "lede", widget: text, required: false }
+                      - { label: "Shaded background", name: "alt", widget: boolean, default: false, required: false }
+                      - { label: "Layout", name: "layout", widget: select, options: [{label: "Cards with color accents", value: "pillar"}, {label: "Simple centered info cards", value: "info"}], default: "pillar" }
+                      - { label: "Note below the cards (optional)", name: "note", widget: string, required: false }
+                      - label: "Cards"
+                        name: "cards"
+                        widget: list
+                        fields:
+                          - { label: "Small tag label", name: "tag", widget: string }
+                          - { label: "Title", name: "title", widget: string }
+                          - { label: "Body text", name: "body", widget: text, required: false }
+                          - { label: "Link (leave blank for a non-clickable card)", name: "link", widget: string, required: false }
+                          - { label: "Accent color", name: "pillar", widget: select, options: [{label: "None", value: "none"}, {label: "Accent color", value: "teal"}, {label: "Primary color", value: "maroon"}], default: "none" }
+                  - label: "Call-to-Action Buttons"
+                    name: "ctaButtons"
+                    widget: object
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
+                      - { label: "Title", name: "title", widget: string, required: false }
+                      - { label: "Subtext", name: "lede", widget: text, required: false }
+                      - { label: "Shaded background", name: "alt", widget: boolean, default: false, required: false }
+                      - label: "Buttons"
+                        name: "buttons"
+                        widget: list
+                        fields:
+                          - { label: "Button text", name: "label", widget: string }
+                          - { label: "Link", name: "href", widget: string }
+                  - label: "Event List"
+                    name: "eventList"
+                    widget: object
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
+                      - { label: "Title", name: "title", widget: string, required: false }
+                      - { label: "Subtext", name: "lede", widget: text, required: false }
+                      - { label: "Note below the list (optional)", name: "note", widget: string, required: false }
+                      - label: "Events"
+                        name: "events"
+                        widget: list
+                        fields:
+                          - { label: "Month", name: "month", widget: string }
+                          - { label: "Day", name: "day", widget: string }
+                          - { label: "Title", name: "title", widget: string }
+                          - { label: "Where / when line", name: "meta", widget: string }
+                          - { label: "Description", name: "body", widget: text }
+                  - label: "FAQ List"
+                    name: "faqList"
+                    widget: object
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
+                      - { label: "Title", name: "title", widget: string, required: false }
+                      - label: "Questions"
+                        name: "items"
+                        widget: list
+                        fields:
+                          - { label: "Question", name: "q", widget: string }
+                          - { label: "Answer", name: "a", widget: text }
+                  - label: "Officer Grid"
+                    name: "officerGrid"
+                    widget: object
+                    fields:
+                      - label: "Officers"
+                        name: "officers"
+                        widget: list
+                        fields:
+                          - { label: "Name", name: "name", widget: string }
+                          - { label: "Role", name: "role", widget: string }
+                          - { label: "Initials (shown if no photo)", name: "initials", widget: string, required: false }
+                          - { label: "Photo", name: "photo", widget: image, required: false }
+                  - label: "Paragraph"
+                    name: "paragraph"
+                    widget: object
+                    fields:
+                      - { label: "Text", name: "text", widget: text }
