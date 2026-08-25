@@ -10,6 +10,18 @@
     });
   }
 
+  function setMeta(name, content, attr) {
+    if (!content) return;
+    var selector = 'meta[' + (attr || 'name') + '="' + name + '"]';
+    var meta = document.querySelector(selector);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attr || 'name', name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
   function rootPrefix() {
     // membership/*.html pages need ../ in front of every root-relative asset/link.
     return location.pathname.indexOf('/membership/') !== -1 ? '../' : '';
@@ -250,10 +262,16 @@
 
       applyColors(site.colors);
       if (page.title) document.title = page.title;
-      if (page.metaDescription) {
-        var meta = document.querySelector('meta[name="description"]');
-        if (!meta) { meta = document.createElement('meta'); meta.name = 'description'; document.head.appendChild(meta); }
-        meta.setAttribute('content', page.metaDescription);
+      setMeta('description', page.metaDescription);
+      setMeta('og:title', page.title, 'property');
+      setMeta('og:description', page.metaDescription, 'property');
+      setMeta('og:type', 'website', 'property');
+      if (site.siteUrl) {
+        var canonicalUrl = site.siteUrl.replace(/\/$/, '') + '/' + (page.path || '');
+        setMeta('og:url', canonicalUrl, 'property');
+        var link = document.querySelector('link[rel="canonical"]');
+        if (!link) { link = document.createElement('link'); link.rel = 'canonical'; document.head.appendChild(link); }
+        link.setAttribute('href', canonicalUrl);
       }
 
       var app = document.getElementById('app');

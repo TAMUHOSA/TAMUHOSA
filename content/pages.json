@@ -45,7 +45,7 @@
       "slug": "events",
       "path": "events.html",
       "title": "Upcoming Events | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "General meetings, service projects, and competition prep for TAMU HOSA - Texas A&M's chapter of Future Health Professionals.",
       "sections": [
         { "type": "pageHero", "heading": "Upcoming Events", "lede": "General meetings, service projects, and competition prep — all in one place." },
         {
@@ -66,7 +66,7 @@
       "slug": "competitions",
       "path": "competitions.html",
       "title": "Competition | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "Compete at the state and international level with TAMU HOSA across dozens of health-science, health professions, and leadership event categories.",
       "sections": [
         { "type": "pageHero", "heading": "Competition", "lede": "Compete at the state and international level across dozens of health-science categories." },
         {
@@ -98,7 +98,7 @@
       "slug": "membership",
       "path": "membership.html",
       "title": "Membership | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "Everything you need to join TAMU HOSA: meeting schedule, dues, member points, and our NMDP community service project.",
       "sections": [
         { "type": "pageHero", "heading": "Membership", "lede": "Everything you need to get involved with TAMU HOSA." },
         {
@@ -119,7 +119,7 @@
       "slug": "contact",
       "path": "contact.html",
       "title": "Contact & FAQs | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "Frequently asked questions about joining TAMU HOSA, plus how to reach the Texas A&M chapter of Future Health Professionals directly.",
       "sections": [
         { "type": "pageHero", "heading": "Contact & FAQs", "lede": "Questions about TAMU HOSA? Start here, or reach out directly." },
         {
@@ -152,7 +152,7 @@
       "slug": "officers",
       "path": "officers.html",
       "title": "Officers | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "Meet the officer team leading TAMU HOSA, the Texas A&M chapter of HOSA - Future Health Professionals.",
       "sections": [
         { "type": "pageHero", "heading": "Meet the Officers", "lede": "Officer photos coming soon." },
         {
@@ -178,7 +178,7 @@
       "slug": "membership-meetings",
       "path": "membership/meetings.html",
       "title": "Meetings | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "TAMU HOSA general meeting schedule, location, and what to expect - the Texas A&M chapter of Future Health Professionals.",
       "sections": [
         { "type": "pageHero", "heading": "General Meetings", "lede": "Our chapter meets biweekly during the fall and spring semesters." },
         {
@@ -197,7 +197,7 @@
       "slug": "membership-flywire",
       "path": "membership/flywire.html",
       "title": "Dues (Flywire) | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "How to pay TAMU HOSA membership dues securely through Flywire.",
       "sections": [
         { "type": "pageHero", "heading": "Dues & Payment", "lede": "Membership dues are collected securely through Flywire." },
         {
@@ -218,7 +218,7 @@
       "slug": "membership-nmdp",
       "path": "membership/nmdp.html",
       "title": "NMDP Service Project | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "TAMU HOSA partners with the National Marrow Donor Program (NMDP) to host bone marrow registry drives on the Texas A&M campus.",
       "sections": [
         { "type": "pageHero", "heading": "NMDP Service Project", "lede": "Partnering with the National Marrow Donor Program to save lives." },
         {
@@ -239,7 +239,7 @@
       "slug": "membership-points",
       "path": "membership/points.html",
       "title": "Member Points | TAMU HOSA",
-      "metaDescription": "",
+      "metaDescription": "How TAMU HOSA tracks member involvement and attendance through its points system.",
       "sections": [
         { "type": "pageHero", "heading": "Member Points", "lede": "How we track involvement and attendance across the chapter." },
         {

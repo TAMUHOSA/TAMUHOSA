@@ -17,6 +17,7 @@ collections:
         label: "Colors, Nav & Footer"
         file: "content/site.json"
         fields:
+          - { label: "Site URL (used for SEO tags — update if the domain ever changes)", name: "siteUrl", widget: string }
           - { label: "Chapter Name", name: "brand", widget: object, fields: [
               { label: "Name", name: "name", widget: string },
               { label: "Affiliation line (small text under the name)", name: "affiliation", widget: string }
