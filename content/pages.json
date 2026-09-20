@@ -619,7 +619,7 @@
             },
             {
               "q": "How do I stay updated on meetings and events?",
-              "a": "Placeholder answer: join our GroupMe and check the Events page for the latest schedule. GroupMe link TBD."
+              "a": "Join us on Flare using the Flare link in the contact section below, and check the Events page for the latest schedule."
             }
           ]
         },
@@ -639,10 +639,10 @@
               "pillar": "none"
             },
             {
-              "tag": "GroupMe",
-              "title": "GroupMe link coming soon",
-              "body": "",
-              "link": "",
+              "tag": "Flare",
+              "title": "Flare link",
+              "body": "Join TAMU HOSA on Flare for events and points.",
+              "link": "https://flare-event.app.link/FY0lkBlgv5b",
               "pillar": "none"
             },
             {
