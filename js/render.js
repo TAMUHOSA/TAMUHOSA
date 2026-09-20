@@ -170,7 +170,7 @@
       var now = new Date();
       var rows = (b.events || []).map(function (ev) {
         var isPast = ev.date && new Date(ev.date + 'T23:59:59') < now;
-        return '<div class="event-row' + (isPast ? ' is-past' : '') + '"><div class="date-stamp"><span class="month">' + esc(ev.month) + '</span><span class="day">' + esc(ev.day) + '</span></div>' +
+        return '<div class="event-row' + (isPast ? ' is-past' : '') + '"><div class="date-stamp' + (String(ev.day).length > 3 ? ' date-stamp-wide' : '') + '"><span class="month">' + esc(ev.month) + '</span><span class="day">' + esc(ev.day) + '</span></div>' +
           '<div class="event-body"><h3>' + esc(ev.title) + (isPast ? ' <span class="event-past-tag">Past</span>' : '') + '</h3>' +
           (ev.meta ? '<div class="meta">' + esc(ev.meta) + '</div>' : '') +
           (ev.body ? '<p>' + esc(ev.body) + '</p>' : '') + '</div></div>';

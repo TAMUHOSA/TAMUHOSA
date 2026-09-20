@@ -772,3 +772,10 @@ footer.site-footer .footer-bottom a:hover {
   border: 1px solid var(--border-strong); border-radius: 999px;
   font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray);
 }
+
+/* Date ranges like "22-23" are too wide for the fixed stamp: keep them on one line and let the stamp grow. */
+.event-row .date-stamp.date-stamp-wide { width: fit-content; min-width: 96px; }
+.event-row .date-stamp-wide .day { font-size: 1.5rem; white-space: nowrap; padding-left: 10px; padding-right: 10px; }
+@media (max-width: 780px) {
+  .event-row .date-stamp.date-stamp-wide { min-width: 96px; align-self: flex-start; }
+}
