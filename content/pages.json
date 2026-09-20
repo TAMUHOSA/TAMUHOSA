@@ -199,22 +199,6 @@
           "lede": "Attend at least 3 for eligibility.",
           "events": [
             {
-              "month": "AUG",
-              "day": "29",
-              "title": "Brazos Valley Food Bank",
-              "meta": "Time: 10 am – 12 pm",
-              "body": "Officers only.",
-              "date": "2026-08-29"
-            },
-            {
-              "month": "SEP",
-              "day": "11",
-              "title": "TAMU BUILD",
-              "meta": "Time: 4 pm – 5 pm",
-              "body": "Officers only.",
-              "date": "2026-09-11"
-            },
-            {
               "month": "OCT",
               "day": "3",
               "title": "Aggieland Humane Society",
