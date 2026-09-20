@@ -518,6 +518,7 @@ a.card:hover { text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 25%; /* portraits are tall; keep faces in frame */
 }
 
 .officer-card .info { padding: 18px; }

@@ -510,7 +510,7 @@
         {
           "type": "pageHero",
           "heading": "Meet the Officers",
-          "lede": "Officer photos coming soon."
+          "lede": "The officers leading TAMU HOSA this year."
         },
         {
           "type": "officerGrid",
@@ -519,73 +519,73 @@
               "name": "Kavin Saravanan",
               "role": "President",
               "initials": "KS",
-              "photo": ""
+              "photo": "images/officers/kavin-saravanan.jpg"
             },
             {
               "name": "Joselynn Lugo",
               "role": "Vice President",
               "initials": "JL",
-              "photo": ""
+              "photo": "images/officers/joselynn-lugo.jpg"
             },
             {
               "name": "Samantha Wong",
               "role": "Secretary",
               "initials": "SW",
-              "photo": ""
+              "photo": "images/officers/samantha-wong.jpg"
             },
             {
               "name": "Esha Gupta",
               "role": "Treasurer",
               "initials": "EG",
-              "photo": ""
+              "photo": "images/officers/esha-gupta.jpg"
             },
             {
               "name": "Pranav Rajesh",
               "role": "Social Chair",
               "initials": "PR",
-              "photo": ""
+              "photo": "images/officers/pranav-rajesh.jpg"
             },
             {
               "name": "Arshi Maniar",
               "role": "Public Outreach",
               "initials": "AM",
-              "photo": ""
+              "photo": "images/officers/arshi-maniar.jpg"
             },
             {
               "name": "Paresh Chotaliya",
               "role": "Recruitment Chair",
               "initials": "PC",
-              "photo": ""
+              "photo": "images/officers/paresh-chotaliya.jpg"
             },
             {
               "name": "Rylan Lathrop",
               "role": "Volunteer Chair",
               "initials": "RL",
-              "photo": ""
+              "photo": "images/officers/rylan-lathrop.jpg"
             },
             {
               "name": "Ambar Raj",
               "role": "Publicist",
               "initials": "AR",
-              "photo": ""
+              "photo": "images/officers/ambar-raj.jpg"
             },
             {
               "name": "Isha Sudheer",
               "role": "Competition Chair",
               "initials": "IS",
-              "photo": ""
+              "photo": "images/officers/isha-sudheer.jpg"
             },
             {
               "name": "Chaitali Padidem",
               "role": "Fundraising Chair",
               "initials": "CP",
-              "photo": ""
+              "photo": "images/officers/chaitali-padidem.jpg"
             },
             {
               "name": "Sanjana Reka",
               "role": "Fundraising Chair",
               "initials": "SR",
-              "photo": ""
+              "photo": "images/officers/sanjana-reka.jpg"
             }
           ]
         }
