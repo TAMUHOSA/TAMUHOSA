@@ -79,41 +79,257 @@
     {
       "slug": "events",
       "path": "events.html",
-      "title": "Upcoming Events | TAMU HOSA",
-      "metaDescription": "General meetings, service projects, and competition prep for TAMU HOSA - Texas A&M's chapter of Future Health Professionals.",
+      "title": "Events | TAMU HOSA",
+      "metaDescription": "TAMU HOSA fall events: fundraisers, socials, volunteering, and NMDP marrow-registry drives at Texas A&M.",
       "sections": [
         {
           "type": "pageHero",
-          "heading": "Upcoming Events",
-          "lede": "General meetings, service projects, and competition prep — all in one place."
+          "heading": "Events",
+          "lede": "Fundraisers, socials, volunteering, and NMDP drives — plus how many of each you need for eligibility."
         },
         {
           "type": "eventList",
-          "eyebrow": "Mark Your Calendar",
-          "title": "This Semester",
-          "lede": "Dates and details below are placeholders. The full event calendar is coming soon.",
-          "note": "Check back for updates.",
+          "eyebrow": "Fundraising",
+          "title": "Fundraising Events",
+          "lede": "Attend at least 3 for eligibility.",
           "events": [
             {
-              "month": "TBD",
-              "day": "?",
-              "title": "General Meeting",
-              "meta": "Where: TBD  •  Time: TBD",
-              "body": "Placeholder listing for a biweekly general meeting. Real schedule coming soon."
+              "month": "SEP",
+              "day": "18",
+              "title": "Profit Share / Meet the Officers",
+              "meta": "Where: Blaze Pizza  •  Time: 4 pm – 11 pm",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-09-18"
             },
             {
-              "month": "TBD",
-              "day": "?",
-              "title": "Competition Prep Workshop",
-              "meta": "Where: TBD  •  Time: TBD",
-              "body": "Placeholder listing for a study/practice session ahead of a competitive event."
+              "month": "SEP",
+              "day": "25",
+              "title": "Bake Sale",
+              "meta": "Where: MSC 12th Man Hall  •  Time: 10 am – 2 pm",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-09-25"
             },
             {
-              "month": "TBD",
-              "day": "?",
-              "title": "NMDP Registry Drive",
-              "meta": "Where: TBD  •  Time: TBD",
-              "body": "Placeholder listing for our community marrow-registry service project. See the NMDP page for details."
+              "month": "OCT",
+              "day": "10",
+              "title": "Bake Sale",
+              "meta": "Where: Northgate  •  Time: 10 pm – 1 am",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-10-10"
+            },
+            {
+              "month": "OCT",
+              "day": "12",
+              "title": "Profit Share",
+              "meta": "Where: Mamaka Bowls  •  Time: 8 am – 7 pm",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-10-12"
+            },
+            {
+              "month": "OCT",
+              "day": "23",
+              "title": "GALA",
+              "meta": "Where: MSC 2406  •  Time: 7 pm – 10 pm",
+              "body": "Mandatory. GALA fee: $143.75. Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-10-23"
+            },
+            {
+              "month": "NOV",
+              "day": "3",
+              "title": "Profit Share",
+              "meta": "Where: Chipotle  •  Time: 4 pm – 7 pm",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-11-03"
+            },
+            {
+              "month": "NOV",
+              "day": "14",
+              "title": "Bake Sale",
+              "meta": "Where: Northgate  •  Time: 10 pm – 1 am",
+              "body": "Counts toward the 3 fundraising events needed for eligibility.",
+              "date": "2026-11-14"
+            }
+          ]
+        },
+        {
+          "type": "eventList",
+          "eyebrow": "Social",
+          "title": "Social Events",
+          "lede": "Attend at least 2 for eligibility.",
+          "events": [
+            {
+              "month": "SEP",
+              "day": "23",
+              "title": "Tote Bag Painting",
+              "meta": "Where: Aggie Park  •  Time: 5 pm – 8 pm",
+              "body": "Counts toward the 2 social events needed for eligibility.",
+              "date": "2026-09-23"
+            },
+            {
+              "month": "OCT",
+              "day": "2",
+              "title": "Midnight Yell vs. Arkansas",
+              "meta": "Time: 9 pm",
+              "body": "Counts toward the 2 social events needed for eligibility.",
+              "date": "2026-10-02"
+            },
+            {
+              "month": "OCT",
+              "day": "30",
+              "title": "Game Night",
+              "meta": "Where: Location TBD  •  Time: 5 or 6 pm – 8 or 9 pm (TBD)",
+              "body": "Counts toward the 2 social events needed for eligibility.",
+              "date": "2026-10-30"
+            },
+            {
+              "month": "NOV",
+              "day": "20",
+              "title": "Top Golf",
+              "meta": "Details TBD",
+              "body": "Details to be confirmed later. Reach out at least a month before. Counts toward the 2 social events needed for eligibility.",
+              "date": "2026-11-20"
+            }
+          ],
+          "alt": true
+        },
+        {
+          "type": "eventList",
+          "eyebrow": "Service",
+          "title": "Volunteering Events",
+          "lede": "Attend at least 3 for eligibility.",
+          "events": [
+            {
+              "month": "AUG",
+              "day": "29",
+              "title": "Brazos Valley Food Bank",
+              "meta": "Time: 10 am – 12 pm",
+              "body": "Officers only.",
+              "date": "2026-08-29"
+            },
+            {
+              "month": "SEP",
+              "day": "11",
+              "title": "TAMU BUILD",
+              "meta": "Time: 4 pm – 5 pm",
+              "body": "Officers only.",
+              "date": "2026-09-11"
+            },
+            {
+              "month": "OCT",
+              "day": "3",
+              "title": "Aggieland Humane Society",
+              "meta": "Time: 9:30 am – 10:30 am",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-10-03"
+            },
+            {
+              "month": "OCT",
+              "day": "17",
+              "title": "Brazos Valley Food Bank",
+              "meta": "Time: 10 am – 12 pm",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-10-17"
+            },
+            {
+              "month": "OCT",
+              "day": "24",
+              "title": "Aggieland Humane Society",
+              "meta": "Time: 9:30 am – 10:30 am",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-10-24"
+            },
+            {
+              "month": "NOV",
+              "day": "7",
+              "title": "Brazos Valley Food Bank",
+              "meta": "Time: 10 am – 12 pm",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-11-07"
+            },
+            {
+              "month": "NOV",
+              "day": "13",
+              "title": "TAMU BUILD",
+              "meta": "Time: 4 pm – 5 pm",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-11-13"
+            },
+            {
+              "month": "NOV",
+              "day": "21",
+              "title": "Aggieland Humane Society",
+              "meta": "Time: 9:30 am – 10:30 am",
+              "body": "Counts toward the 3 volunteering events needed for eligibility.",
+              "date": "2026-11-21"
+            }
+          ]
+        },
+        {
+          "type": "eventList",
+          "eyebrow": "NMDP",
+          "title": "NMDP Volunteering Events",
+          "lede": "Attend at least 2 for eligibility.",
+          "events": [
+            {
+              "month": "SEP",
+              "day": "22–23",
+              "title": "World Marrow Donor Day",
+              "meta": "Where: Outside Evans  •  Time: 9:30 am – 2:30 pm (both days)",
+              "body": "Counts toward the 2 NMDP volunteering events needed for eligibility.",
+              "date": "2026-09-23"
+            },
+            {
+              "month": "OCT",
+              "day": "12–14",
+              "title": "Aggies Tackling Cancer",
+              "meta": "Where: Rudder Plaza  •  Time: 9:30 am – 2:30 pm (all three days)",
+              "body": "Counts toward the 2 NMDP volunteering events needed for eligibility.",
+              "date": "2026-10-14"
+            },
+            {
+              "month": "NOV",
+              "day": "16–18",
+              "title": "Give Thanks Give Life",
+              "meta": "Where: Rudder Plaza  •  Time: 9:30 am – 2:30 pm (all three days)",
+              "body": "Counts toward the 2 NMDP volunteering events needed for eligibility.",
+              "date": "2026-11-18"
+            }
+          ],
+          "alt": true
+        },
+        {
+          "type": "eventList",
+          "eyebrow": "Chapter",
+          "title": "Chapter Dates",
+          "lede": "",
+          "events": [
+            {
+              "month": "SEP",
+              "day": "6",
+              "title": "Club Crawl",
+              "date": "2026-09-06"
+            },
+            {
+              "month": "SEP",
+              "day": "8",
+              "title": "In-Person Informational",
+              "meta": "Where: MSC 2505",
+              "date": "2026-09-08"
+            },
+            {
+              "month": "SEP",
+              "day": "9",
+              "title": "Online Informational",
+              "meta": "Where: Zoom",
+              "date": "2026-09-09"
+            },
+            {
+              "month": "SEP",
+              "day": "30",
+              "title": "Affiliation Dues Due ($25)",
+              "meta": "Time: Midnight",
+              "body": "Affiliation dues of $25 are due by midnight.",
+              "date": "2026-09-30"
             }
           ]
         }
@@ -405,16 +621,209 @@
         {
           "type": "eventList",
           "eyebrow": "Schedule",
-          "title": "Meeting Info",
-          "lede": "Placeholder schedule below. Real meeting times and locations will be posted here once finalized.",
-          "note": "Check back for updates.",
+          "title": "Fall General Meetings",
+          "lede": "Mandatory general meetings are every other Tuesday at 5:30 pm, with two absences allowed. Location details are posted in Flare.",
           "events": [
             {
-              "month": "TBD",
-              "day": "?",
-              "title": "Biweekly General Meeting",
-              "meta": "Where: TBD  •  Time: TBD",
-              "body": "General meetings cover chapter updates, competition prep, and guest speakers. Placeholder — day/time/location TBD."
+              "month": "SEP",
+              "day": "15",
+              "title": "First Meeting",
+              "meta": "Where: Rudder 501",
+              "body": "Kaplan guest speaker, then bonding games. Slides are below.",
+              "date": "2026-09-15"
+            },
+            {
+              "month": "SEP",
+              "day": "29",
+              "title": "Second Meeting",
+              "meta": "Where: Rudder 501",
+              "body": "Resume workshop.",
+              "date": "2026-09-29"
+            },
+            {
+              "month": "OCT",
+              "day": "13",
+              "title": "Third Meeting",
+              "meta": "Where: MSC 2505",
+              "body": "Guest speaker (tentative).",
+              "date": "2026-10-13"
+            },
+            {
+              "month": "OCT",
+              "day": "27",
+              "title": "Fourth Meeting",
+              "meta": "Where: Rudder 501",
+              "body": "Jeopardy and NMDP (both tentative).",
+              "date": "2026-10-27"
+            },
+            {
+              "month": "NOV",
+              "day": "10",
+              "title": "Fifth Meeting",
+              "meta": "Where: Rudder 501",
+              "body": "A workshop and TAMECT (both tentative).",
+              "date": "2026-11-10"
+            },
+            {
+              "month": "NOV",
+              "day": "24",
+              "title": "Sixth Meeting",
+              "meta": "Where: Rudder 501",
+              "body": "Competition. May be held over Zoom.",
+              "date": "2026-11-24"
+            }
+          ]
+        },
+        {
+          "type": "slideViewer",
+          "alt": true,
+          "eyebrow": "Meeting 1",
+          "title": "1st Fall General Meeting",
+          "lede": "Missed it or want to look back? Scroll through the slides below, or use the arrow keys.",
+          "slides": [
+            {
+              "image": "images/meetings/meeting-1/slide-01.jpg",
+              "alt": "Meeting 1 slide 1 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-02.jpg",
+              "alt": "Meeting 1 slide 2 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-03.jpg",
+              "alt": "Meeting 1 slide 3 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-04.jpg",
+              "alt": "Meeting 1 slide 4 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-05.jpg",
+              "alt": "Meeting 1 slide 5 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-06.jpg",
+              "alt": "Meeting 1 slide 6 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-07.jpg",
+              "alt": "Meeting 1 slide 7 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-08.jpg",
+              "alt": "Meeting 1 slide 8 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-09.jpg",
+              "alt": "Meeting 1 slide 9 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-10.jpg",
+              "alt": "Meeting 1 slide 10 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-11.jpg",
+              "alt": "Meeting 1 slide 11 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-12.jpg",
+              "alt": "Meeting 1 slide 12 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-13.jpg",
+              "alt": "Meeting 1 slide 13 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-14.jpg",
+              "alt": "Meeting 1 slide 14 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-15.jpg",
+              "alt": "Meeting 1 slide 15 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-16.jpg",
+              "alt": "Meeting 1 slide 16 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-17.jpg",
+              "alt": "Meeting 1 slide 17 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-18.jpg",
+              "alt": "Meeting 1 slide 18 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-19.jpg",
+              "alt": "Meeting 1 slide 19 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-20.jpg",
+              "alt": "Meeting 1 slide 20 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-21.jpg",
+              "alt": "Meeting 1 slide 21 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-22.jpg",
+              "alt": "Meeting 1 slide 22 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-23.jpg",
+              "alt": "Meeting 1 slide 23 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-24.jpg",
+              "alt": "Meeting 1 slide 24 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-25.jpg",
+              "alt": "Meeting 1 slide 25 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-26.jpg",
+              "alt": "Meeting 1 slide 26 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-27.jpg",
+              "alt": "Meeting 1 slide 27 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-28.jpg",
+              "alt": "Meeting 1 slide 28 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-29.jpg",
+              "alt": "Meeting 1 slide 29 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-30.jpg",
+              "alt": "Meeting 1 slide 30 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-31.jpg",
+              "alt": "Meeting 1 slide 31 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-32.jpg",
+              "alt": "Meeting 1 slide 32 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-33.jpg",
+              "alt": "Meeting 1 slide 33 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-34.jpg",
+              "alt": "Meeting 1 slide 34 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-35.jpg",
+              "alt": "Meeting 1 slide 35 of 36"
+            },
+            {
+              "image": "images/meetings/meeting-1/slide-36.jpg",
+              "alt": "Meeting 1 slide 36 of 36"
             }
           ]
         }

@@ -162,13 +162,15 @@
         '</div></section>';
     },
     eventList: function (b) {
+      var now = new Date();
       var rows = (b.events || []).map(function (ev) {
-        return '<div class="event-row"><div class="date-stamp"><span class="month">' + esc(ev.month) + '</span><span class="day">' + esc(ev.day) + '</span></div>' +
-          '<div class="event-body"><h3>' + esc(ev.title) + '</h3>' +
-          '<div class="meta">' + esc(ev.meta) + '</div>' +
-          '<p>' + esc(ev.body) + '</p></div></div>';
+        var isPast = ev.date && new Date(ev.date + 'T23:59:59') < now;
+        return '<div class="event-row' + (isPast ? ' is-past' : '') + '"><div class="date-stamp"><span class="month">' + esc(ev.month) + '</span><span class="day">' + esc(ev.day) + '</span></div>' +
+          '<div class="event-body"><h3>' + esc(ev.title) + (isPast ? ' <span class="event-past-tag">Past</span>' : '') + '</h3>' +
+          (ev.meta ? '<div class="meta">' + esc(ev.meta) + '</div>' : '') +
+          (ev.body ? '<p>' + esc(ev.body) + '</p>' : '') + '</div></div>';
       }).join('');
-      return '<section><div class="container">' +
+      return '<section' + (b.alt ? ' class="alt"' : '') + '><div class="container">' +
         (b.eyebrow ? '<span class="eyebrow-tag">' + esc(b.eyebrow) + '</span>' : '') +
         (b.title ? '<h2 class="section-title">' + esc(b.title) + '</h2>' : '') +
         (b.lede ? '<p class="section-lede">' + esc(b.lede) + '</p>' : '') +
@@ -196,6 +198,27 @@
           '<div class="info"><h3>' + esc(o.name) + '</h3><div class="role">' + esc(o.role) + '</div></div></div>';
       }).join('');
       return '<section><div class="container"><div class="grid">' + cards + '</div></div></section>';
+    },
+    slideViewer: function (b) {
+      var slides = (b.slides || []);
+      var items = slides.map(function (sl, i) {
+        return '<li class="slide">' +
+          '<img src="' + esc(resolveHref(sl.image)) + '" alt="' + esc(sl.alt || ('Slide ' + (i + 1) + ' of ' + slides.length)) + '"' +
+          (i === 0 ? '' : ' loading="lazy"') + ' decoding="async"></li>';
+      }).join('');
+      return '<section' + (b.alt ? ' class="alt"' : '') + '><div class="container">' +
+        (b.eyebrow ? '<span class="eyebrow-tag">' + esc(b.eyebrow) + '</span>' : '') +
+        (b.title ? '<h2 class="section-title">' + esc(b.title) + '</h2>' : '') +
+        (b.lede ? '<p class="section-lede">' + esc(b.lede) + '</p>' : '') +
+        '<div class="slide-viewer" role="region" aria-roledescription="carousel" aria-label="' + esc(b.title || 'Slides') + '" tabindex="0">' +
+        '<ol class="slide-track">' + items + '</ol>' +
+        '<div class="slide-controls">' +
+        '<button type="button" class="slide-btn slide-prev" aria-label="Previous slide">&#8592;</button>' +
+        '<span class="slide-count" aria-live="polite">1 / ' + slides.length + '</span>' +
+        '<button type="button" class="slide-btn slide-next" aria-label="Next slide">&#8594;</button>' +
+        '</div></div>' +
+        (b.note ? '<p class="check-back-note">' + esc(b.note) + '</p>' : '') +
+        '</div></section>';
     },
     paragraph: function (b) {
       return '<section><div class="container"><p class="check-back-note">' + esc(b.text) + '</p></div></section>';
@@ -247,6 +270,39 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       revealTargets.forEach(function (el) { observer.observe(el); });
     }
+
+    document.querySelectorAll('.slide-viewer').forEach(function (viewer) {
+      var track = viewer.querySelector('.slide-track');
+      var count = viewer.querySelector('.slide-count');
+      var prev = viewer.querySelector('.slide-prev');
+      var next = viewer.querySelector('.slide-next');
+      var total = track.children.length;
+      var pending = null, pendingTimer = null;
+      var current = function () { return pending !== null ? pending : Math.round(track.scrollLeft / track.clientWidth); };
+      var goTo = function (i) {
+        i = Math.max(0, Math.min(total - 1, i));
+        // Remember the destination while the smooth scroll runs so rapid clicks keep advancing.
+        pending = i;
+        clearTimeout(pendingTimer);
+        pendingTimer = setTimeout(function () { pending = null; }, 600);
+        track.scrollTo({ left: i * track.clientWidth, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      };
+      var update = function () {
+        var i = current();
+        count.textContent = (i + 1) + ' / ' + total;
+        prev.disabled = i === 0;
+        next.disabled = i === total - 1;
+      };
+      prev.addEventListener('click', function () { goTo(current() - 1); });
+      next.addEventListener('click', function () { goTo(current() + 1); });
+      viewer.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current() + 1); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current() - 1); }
+      });
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    });
   }
 
   function boot() {

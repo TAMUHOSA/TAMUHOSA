@@ -153,6 +153,7 @@ collections:
                       - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
                       - { label: "Subtext", name: "lede", widget: text, required: false }
+                      - { label: "Shaded background", name: "alt", widget: boolean, default: false, required: false }
                       - { label: "Note below the list (optional)", name: "note", widget: string, required: false }
                       - label: "Events"
                         name: "events"
@@ -161,8 +162,9 @@ collections:
                           - { label: "Month", name: "month", widget: string }
                           - { label: "Day", name: "day", widget: string }
                           - { label: "Title", name: "title", widget: string }
-                          - { label: "Where / when line", name: "meta", widget: string }
-                          - { label: "Description", name: "body", widget: text }
+                          - { label: "Where / when line", name: "meta", widget: string, required: false }
+                          - { label: "Description", name: "body", widget: text, required: false }
+                          - { label: "Date (YYYY-MM-DD, last day — adds a 'Past' tag once it has passed)", name: "date", widget: string, required: false }
                   - label: "FAQ List"
                     name: "faqList"
                     widget: object
@@ -187,6 +189,21 @@ collections:
                           - { label: "Role", name: "role", widget: string }
                           - { label: "Initials (shown if no photo)", name: "initials", widget: string, required: false }
                           - { label: "Photo", name: "photo", widget: image, required: false }
+                  - label: "Slide Viewer (scrollable slideshow)"
+                    name: "slideViewer"
+                    widget: object
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
+                      - { label: "Title", name: "title", widget: string, required: false }
+                      - { label: "Subtext", name: "lede", widget: text, required: false }
+                      - { label: "Shaded background", name: "alt", widget: boolean, default: false, required: false }
+                      - { label: "Note below the slides (optional)", name: "note", widget: string, required: false }
+                      - label: "Slides (in order)"
+                        name: "slides"
+                        widget: list
+                        fields:
+                          - { label: "Slide image", name: "image", widget: image }
+                          - { label: "Alt text (describe the slide)", name: "alt", widget: string, required: false }
                   - label: "Paragraph"
                     name: "paragraph"
                     widget: object
