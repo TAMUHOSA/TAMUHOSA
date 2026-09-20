@@ -135,5 +135,23 @@
         ]
       }
     ]
+  },
+  "ui": {
+    "skipLink": "Skip to main content",
+    "menuToggleLabel": "Toggle menu",
+    "menuToggleIcon": "☰",
+    "pastEventTag": "Past",
+    "slidePrevLabel": "Previous slide",
+    "slideNextLabel": "Next slide",
+    "slidePrevIcon": "←",
+    "slideNextIcon": "→",
+    "slideCounter": "{current} / {total}",
+    "slideAltFallback": "Slide {current} of {total}",
+    "slidesRegionLabel": "Slides",
+    "carouselRoleDescription": "carousel",
+    "pageNotFound": "Page not found.",
+    "loadError": "Could not load site content.",
+    "faqClosedIcon": "+",
+    "faqOpenIcon": "−"
   }
 }

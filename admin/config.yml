@@ -6,15 +6,18 @@ backend:
   auth_endpoint: auth
 
 publish_mode: simple
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+site_url: https://tamuhosa.com
+display_url: https://tamuhosa.com
 
 collections:
   - name: "settings"
     label: "Site Settings"
     files:
       - name: "site"
-        label: "Colors, Nav & Footer"
+        label: "Brand, Colors, Menu, Footer & Interface Text"
         file: "content/site.json"
         fields:
           - { label: "Site URL (used for SEO tags — update if the domain ever changes)", name: "siteUrl", widget: string }
@@ -42,6 +45,7 @@ collections:
           - label: "Navigation Menu"
             name: "nav"
             widget: list
+            summary: "{{fields.label}}"
             hint: "The links across the top of every page. To link to a page you added below, use page.html?slug=your-slug — otherwise use the page's own file, like events.html."
             fields:
               - { label: "Label", name: "label", widget: string }
@@ -50,6 +54,7 @@ collections:
               - label: "Dropdown items (leave empty for a plain link)"
                 name: "dropdown"
                 widget: list
+                summary: "{{fields.label}}"
                 required: false
                 fields:
                   - { label: "Label", name: "label", widget: string }
@@ -63,14 +68,38 @@ collections:
               - label: "Footer link columns"
                 name: "columns"
                 widget: list
+                summary: "{{fields.heading}}"
                 fields:
                   - { label: "Column heading", name: "heading", widget: string }
                   - label: "Links"
                     name: "links"
                     widget: list
+                    summary: "{{fields.label}}"
                     fields:
                       - { label: "Label", name: "label", widget: string }
                       - { label: "Link", name: "href", widget: string }
+
+          - label: "Interface text (buttons, screen-reader labels, messages)"
+            name: "ui"
+            widget: object
+            hint: "Small pieces of text that appear on every page but aren't part of any one page. Leave the {curly} placeholders as they are; they get filled in automatically."
+            fields:
+              - { label: "Skip link (hidden, shown to keyboard and screen-reader users)", name: "skipLink", widget: string }
+              - { label: "Mobile menu button: screen-reader label", name: "menuToggleLabel", widget: string }
+              - { label: "Mobile menu button: icon", name: "menuToggleIcon", widget: string }
+              - { label: "Tag shown on events that already happened", name: "pastEventTag", widget: string }
+              - { label: "Slideshow: previous button label (screen readers)", name: "slidePrevLabel", widget: string }
+              - { label: "Slideshow: next button label (screen readers)", name: "slideNextLabel", widget: string }
+              - { label: "Slideshow: previous button icon", name: "slidePrevIcon", widget: string }
+              - { label: "Slideshow: next button icon", name: "slideNextIcon", widget: string }
+              - { label: "Slideshow: counter format ({current} and {total} are filled in)", name: "slideCounter", widget: string }
+              - { label: "Slideshow: description used when a slide has no alt text ({current}, {total})", name: "slideAltFallback", widget: string }
+              - { label: "Slideshow: label used when the slideshow has no title", name: "slidesRegionLabel", widget: string }
+              - { label: "Slideshow: type of widget (screen readers)", name: "carouselRoleDescription", widget: string }
+              - { label: "FAQ question: icon when the answer is closed", name: "faqClosedIcon", widget: string }
+              - { label: "FAQ question: icon when the answer is open", name: "faqOpenIcon", widget: string }
+              - { label: "Message when a page can't be found", name: "pageNotFound", widget: string }
+              - { label: "Message when the site can't load", name: "loadError", widget: string }
 
   - name: "pages"
     label: "Pages"
@@ -82,6 +111,7 @@ collections:
           - label: "Pages"
             name: "pages"
             widget: list
+            summary: "{{fields.title}}"
             hint: "One entry per page on the site. Delete an entry to remove that page. For a brand-new page, set its Path to page.html and give it a unique Slug — it will live at page.html?slug=your-slug. Don't forget to also add it to the Navigation Menu or a Footer column in Site Settings so people can find it."
             fields:
               - { label: "Slug (short id, no spaces, e.g. sponsors)", name: "slug", widget: string }
@@ -96,6 +126,7 @@ collections:
                   - label: "Big Hero (homepage-style banner)"
                     name: "heroBig"
                     widget: object
+                    summary: "{{fields.heading}}"
                     fields:
                       - { label: "Kicker (small label above the heading)", name: "kicker", widget: string }
                       - { label: "Heading", name: "heading", widget: string }
@@ -103,6 +134,7 @@ collections:
                       - label: "Buttons"
                         name: "buttons"
                         widget: list
+                        summary: "{{fields.label}}"
                         fields:
                           - { label: "Button text", name: "label", widget: string }
                           - { label: "Link", name: "href", widget: string }
@@ -110,12 +142,14 @@ collections:
                   - label: "Page Hero (simple heading banner)"
                     name: "pageHero"
                     widget: object
+                    summary: "{{fields.heading}}"
                     fields:
                       - { label: "Heading", name: "heading", widget: string }
                       - { label: "Subtext", name: "lede", widget: text }
                   - label: "Card Grid"
                     name: "cardGrid"
                     widget: object
+                    summary: "{{fields.title}}"
                     fields:
                       - { label: "Eyebrow (small label above the title)", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
@@ -126,6 +160,7 @@ collections:
                       - label: "Cards"
                         name: "cards"
                         widget: list
+                        summary: "{{fields.title}}"
                         fields:
                           - { label: "Small tag label", name: "tag", widget: string }
                           - { label: "Title", name: "title", widget: string }
@@ -135,6 +170,7 @@ collections:
                   - label: "Call-to-Action Buttons"
                     name: "ctaButtons"
                     widget: object
+                    summary: "{{fields.title}}"
                     fields:
                       - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
@@ -143,12 +179,14 @@ collections:
                       - label: "Buttons"
                         name: "buttons"
                         widget: list
+                        summary: "{{fields.label}}"
                         fields:
                           - { label: "Button text", name: "label", widget: string }
                           - { label: "Link", name: "href", widget: string }
                   - label: "Event List"
                     name: "eventList"
                     widget: object
+                    summary: "{{fields.title}}"
                     fields:
                       - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
@@ -158,6 +196,7 @@ collections:
                       - label: "Events"
                         name: "events"
                         widget: list
+                        summary: "{{fields.month}} {{fields.day}}: {{fields.title}}"
                         fields:
                           - { label: "Month", name: "month", widget: string }
                           - { label: "Day", name: "day", widget: string }
@@ -168,30 +207,36 @@ collections:
                   - label: "FAQ List"
                     name: "faqList"
                     widget: object
+                    summary: "{{fields.title}}"
                     fields:
                       - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
                       - label: "Questions"
                         name: "items"
                         widget: list
+                        summary: "{{fields.q}}"
                         fields:
                           - { label: "Question", name: "q", widget: string }
                           - { label: "Answer", name: "a", widget: text }
                   - label: "Officer Grid"
                     name: "officerGrid"
                     widget: object
+                    summary: "Officers"
                     fields:
                       - label: "Officers"
                         name: "officers"
                         widget: list
+                        summary: "{{fields.name}}: {{fields.role}}"
                         fields:
                           - { label: "Name", name: "name", widget: string }
                           - { label: "Role", name: "role", widget: string }
                           - { label: "Initials (shown if no photo)", name: "initials", widget: string, required: false }
                           - { label: "Photo", name: "photo", widget: image, required: false }
+                          - { label: "Photo description for screen readers (defaults to the officer's name)", name: "photoAlt", widget: string, required: false }
                   - label: "Slide Viewer (scrollable slideshow)"
                     name: "slideViewer"
                     widget: object
+                    summary: "{{fields.title}}"
                     fields:
                       - { label: "Eyebrow", name: "eyebrow", widget: string, required: false }
                       - { label: "Title", name: "title", widget: string, required: false }
@@ -201,11 +246,13 @@ collections:
                       - label: "Slides (in order)"
                         name: "slides"
                         widget: list
+                        summary: "{{fields.alt}}"
                         fields:
                           - { label: "Slide image", name: "image", widget: image }
                           - { label: "Alt text (describe the slide)", name: "alt", widget: string, required: false }
                   - label: "Paragraph"
                     name: "paragraph"
                     widget: object
+                    summary: "{{fields.text}}"
                     fields:
                       - { label: "Text", name: "text", widget: text }

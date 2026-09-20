@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tamuhosa.github.io/TAMUHOSA/sitemap.xml
+Sitemap: https://tamuhosa.com/sitemap.xml

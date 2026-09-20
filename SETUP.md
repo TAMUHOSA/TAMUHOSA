@@ -38,11 +38,11 @@ Visit `<your Pages URL>/admin/`, click **Login with GitHub**, approve access. Yo
 
 ---
 
-### Current live setup (as of this migration)
-- Repo: `TAMUHOSA/TAMUHOSA`
-- Pages URL: `https://tamuhosa.github.io/TAMUHOSA/` (confirm exact casing/URL once Pages finishes its first build)
-- OAuth relay: `https://tamuhosa-oauth.rylanlat.workers.dev` (unchanged, repo-agnostic — same worker works for any repo)
-- OAuth App "TAMU HOSA Site Editor" is registered under RyLaptop's personal GitHub account; only its Homepage URL needed updating after the move, the callback stays the same.
+### Current live setup
+- Repo: `TAMUHOSA/TAMUHOSA` (branch `main`, GitHub Pages from the repo root)
+- Live site: `https://tamuhosa.com/` (custom domain, see `CNAME`); the editor is at `https://tamuhosa.com/admin/`
+- OAuth relay: `https://tamuhosa-oauth.rylanlat.workers.dev` (repo-agnostic, same worker works for any repo)
+- OAuth App "TAMU HOSA Site Editor" is registered under RyLaptop's personal GitHub account.
 
 ### Handing this off to a future officer
 Steps 1–4 are one-time. A new officer needs a GitHub account added as a collaborator on `TAMUHOSA/TAMUHOSA` (Settings → Collaborators), or use the shared TAMUHOSA account's own login, then go straight to `/admin/`.
@@ -51,3 +51,21 @@ Steps 1–4 are one-time. A new officer needs a GitHub account added as a collab
 - **"This browser doesn't have edit access"**: the GitHub account logging in isn't a collaborator on this repo. Add them under Settings → Collaborators. A pending invite must be accepted by the invitee (check github.com/notifications or the email GitHub sends) before it grants access.
 - **Login button does nothing / popup blocked**: allow popups for the Pages URL.
 - **Worker changed URLs**: update both the OAuth App's callback URL (step 2) and `admin/config.yml`'s `base_url` (step 4) to match.
+
+---
+
+## What the editor can change
+
+Every piece of text on the site lives in one of two files, both editable at `/admin/`:
+
+- **Site Settings** (`content/site.json`): chapter name, colors, the top menu (including dropdowns), the footer (tagline, copyright, link columns), and **Interface text**: the small labels that appear on every page but belong to no single page (the "Skip to main content" link, mobile menu button label, the "Past" tag on old events, slideshow buttons and counter, FAQ open/close icons, and the "page not found" and error messages).
+- **Pages** (`content/pages.json`): every page, its browser-tab title, its search description, and every block on it (headings, paragraphs, cards, buttons and their links, events, FAQs, officers and their photos, slideshows and their alt text).
+
+The page files themselves (`index.html`, `events/*.html`, and so on) contain no text; they only load the site.
+
+Notes:
+- **Uploaded images** go to `images/uploads/`. The site's existing images are in `images/`.
+- **Adding a page:** add it under Pages with Path `page.html` and a unique Slug, then add a link to it in the menu or footer. It will live at `page.html?slug=your-slug`.
+- **Event and membership pages** already have their own files (`events/*.html`, `membership/*.html`); reuse those paths when editing them.
+- **Search engines:** if you add a page, also add it to `sitemap.xml` (this file isn't editable in the editor).
+- **Past events** get a dimmed "Past" tag automatically once the event's `Date` (YYYY-MM-DD, last day) has passed.

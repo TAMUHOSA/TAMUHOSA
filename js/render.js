@@ -10,6 +10,35 @@
     });
   }
 
+  // Interface text that isn't part of any page (button labels, screen-reader labels, error messages).
+  // Officers edit these in the site editor under Site Settings > Interface text (site.json "ui");
+  // the defaults below are only used if a key is missing or site.json can't load.
+  var DEFAULT_UI = {
+    skipLink: 'Skip to main content',
+    menuToggleLabel: 'Toggle menu',
+    menuToggleIcon: '\u2630',
+    pastEventTag: 'Past',
+    slidePrevLabel: 'Previous slide',
+    slideNextLabel: 'Next slide',
+    slidePrevIcon: '\u2190',
+    slideNextIcon: '\u2192',
+    slideCounter: '{current} / {total}',
+    slideAltFallback: 'Slide {current} of {total}',
+    slidesRegionLabel: 'Slides',
+    carouselRoleDescription: 'carousel',
+    faqClosedIcon: '+',
+    faqOpenIcon: '−',
+    pageNotFound: 'Page not found.',
+    loadError: 'Could not load site content.'
+  };
+  var UI = DEFAULT_UI;
+
+  function ui(key, vars) {
+    var str = String(UI[key] != null ? UI[key] : DEFAULT_UI[key]);
+    if (vars) Object.keys(vars).forEach(function (k) { str = str.split('{' + k + '}').join(vars[k]); });
+    return str;
+  }
+
   function setMeta(name, content, attr) {
     if (!content) return;
     var selector = 'meta[' + (attr || 'name') + '="' + name + '"]';
@@ -34,8 +63,8 @@
 
   function resolveHref(href) {
     if (!href) return '#';
-    if (/^(https?:|mailto:|#)/.test(href)) return href;
-    return rootPrefix() + href;
+    if (/^(https?:|mailto:|tel:|#)/.test(href)) return href;
+    return rootPrefix() + href.replace(/^\/+/, '');
   }
 
   function currentSlug() {
@@ -99,7 +128,7 @@
       '<span>' + esc(site.brand.name) + '<span class="affiliation">' + esc(site.brand.affiliation) + '</span></span>' +
       '</a>' +
       '<nav>' +
-      '<button class="nav-toggle-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>' +
+      '<button class="nav-toggle-mobile" aria-label="' + esc(ui('menuToggleLabel')) + '" aria-expanded="false" aria-controls="primary-nav">' + esc(ui('menuToggleIcon')) + '</button>' +
       '<ul id="primary-nav">' + navItems + '</ul>' +
       '</nav></div></header>';
   }
@@ -171,7 +200,7 @@
       var rows = (b.events || []).map(function (ev) {
         var isPast = ev.date && new Date(ev.date + 'T23:59:59') < now;
         return '<div class="event-row' + (isPast ? ' is-past' : '') + '"><div class="date-stamp' + (String(ev.day).length > 3 ? ' date-stamp-wide' : '') + '"><span class="month">' + esc(ev.month) + '</span><span class="day">' + esc(ev.day) + '</span></div>' +
-          '<div class="event-body"><h3>' + esc(ev.title) + (isPast ? ' <span class="event-past-tag">Past</span>' : '') + '</h3>' +
+          '<div class="event-body"><h3>' + esc(ev.title) + (isPast ? ' <span class="event-past-tag">' + esc(ui('pastEventTag')) + '</span>' : '') + '</h3>' +
           (ev.meta ? '<div class="meta">' + esc(ev.meta) + '</div>' : '') +
           (ev.body ? '<p>' + esc(ev.body) + '</p>' : '') + '</div></div>';
       }).join('');
@@ -185,7 +214,9 @@
     },
     faqList: function (b) {
       var items = (b.items || []).map(function (f) {
-        return '<details class="faq-item"><summary>' + esc(f.q) + '</summary>' +
+        return '<details class="faq-item"><summary><span class="faq-q">' + esc(f.q) + '</span>' +
+          '<span class="faq-marker faq-marker-closed" aria-hidden="true">' + esc(ui('faqClosedIcon')) + '</span>' +
+          '<span class="faq-marker faq-marker-open" aria-hidden="true">' + esc(ui('faqOpenIcon')) + '</span></summary>' +
           '<div class="faq-answer">' + esc(f.a) + '</div></details>';
       }).join('');
       return '<section><div class="container">' +
@@ -197,7 +228,7 @@
     officerGrid: function (b) {
       var cards = (b.officers || []).map(function (o) {
         var photo = o.photo
-          ? '<img src="' + esc(resolveHref(o.photo)) + '" alt="' + esc(o.name) + '">'
+          ? '<img src="' + esc(resolveHref(o.photo)) + '" alt="' + esc(o.photoAlt || o.name) + '">'
           : '<span class="initials">' + esc(o.initials) + '</span>';
         return '<div class="officer-card"><div class="officer-photo">' + photo + '</div>' +
           '<div class="info"><h3>' + esc(o.name) + '</h3><div class="role">' + esc(o.role) + '</div></div></div>';
@@ -208,19 +239,19 @@
       var slides = (b.slides || []);
       var items = slides.map(function (sl, i) {
         return '<li class="slide">' +
-          '<img src="' + esc(resolveHref(sl.image)) + '" alt="' + esc(sl.alt || ('Slide ' + (i + 1) + ' of ' + slides.length)) + '"' +
+          '<img src="' + esc(resolveHref(sl.image)) + '" alt="' + esc(sl.alt || ui('slideAltFallback', { current: i + 1, total: slides.length })) + '"' +
           (i === 0 ? '' : ' loading="lazy"') + ' decoding="async"></li>';
       }).join('');
       return '<section' + (b.alt ? ' class="alt"' : '') + '><div class="container">' +
         (b.eyebrow ? '<span class="eyebrow-tag">' + esc(b.eyebrow) + '</span>' : '') +
         (b.title ? '<h2 class="section-title">' + esc(b.title) + '</h2>' : '') +
         (b.lede ? '<p class="section-lede">' + esc(b.lede) + '</p>' : '') +
-        '<div class="slide-viewer" role="region" aria-roledescription="carousel" aria-label="' + esc(b.title || 'Slides') + '" tabindex="0">' +
+        '<div class="slide-viewer" role="region" aria-roledescription="' + esc(ui('carouselRoleDescription')) + '" aria-label="' + esc(b.title || ui('slidesRegionLabel')) + '" tabindex="0">' +
         '<ol class="slide-track">' + items + '</ol>' +
         '<div class="slide-controls">' +
-        '<button type="button" class="slide-btn slide-prev" aria-label="Previous slide">&#8592;</button>' +
-        '<span class="slide-count" aria-live="polite">1 / ' + slides.length + '</span>' +
-        '<button type="button" class="slide-btn slide-next" aria-label="Next slide">&#8594;</button>' +
+        '<button type="button" class="slide-btn slide-prev" aria-label="' + esc(ui('slidePrevLabel')) + '">' + esc(ui('slidePrevIcon')) + '</button>' +
+        '<span class="slide-count" aria-live="polite">' + esc(ui('slideCounter', { current: 1, total: slides.length })) + '</span>' +
+        '<button type="button" class="slide-btn slide-next" aria-label="' + esc(ui('slideNextLabel')) + '">' + esc(ui('slideNextIcon')) + '</button>' +
         '</div></div>' +
         (b.note ? '<p class="check-back-note">' + esc(b.note) + '</p>' : '') +
         '</div></section>';
@@ -294,7 +325,7 @@
       };
       var update = function () {
         var i = current();
-        count.textContent = (i + 1) + ' / ' + total;
+        count.textContent = ui('slideCounter', { current: i + 1, total: total });
         prev.disabled = i === 0;
         next.disabled = i === total - 1;
       };
@@ -318,8 +349,9 @@
     ]).then(function (results) {
       var site = results[0];
       var pages = results[1].pages;
+      UI = Object.assign({}, DEFAULT_UI, site.ui || {});
       var page = findPage(pages);
-      if (!page) { document.getElementById('app').innerHTML = '<p style="padding:60px;text-align:center;">Page not found.</p>'; return; }
+      if (!page) { document.getElementById('app').innerHTML = '<p style="padding:60px;text-align:center;">' + esc(ui('pageNotFound')) + '</p>'; return; }
 
       applyColors(site.colors);
       if (page.title) document.title = page.title;
@@ -337,14 +369,14 @@
 
       var app = document.getElementById('app');
       app.innerHTML =
-        '<a href="#main-content" class="skip-link">Skip to main content</a>' +
+        '<a href="#main-content" class="skip-link">' + esc(ui('skipLink')) + '</a>' +
         renderHeader(site) +
         '<main id="main-content">' + renderSections(page.sections) + '</main>' +
         renderFooter(site);
 
       setupInteractivity();
     }).catch(function (err) {
-      document.getElementById('app').innerHTML = '<p style="padding:60px;text-align:center;">Could not load site content. ' + esc(err.message) + '</p>';
+      document.getElementById('app').innerHTML = '<p style="padding:60px;text-align:center;">' + esc(ui('loadError')) + ' ' + esc(err.message) + '</p>';
     });
   }
 

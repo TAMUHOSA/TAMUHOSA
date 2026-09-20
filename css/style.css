@@ -616,8 +616,9 @@ a.card:hover { text-decoration: none; }
 }
 
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--navy); }
-.faq-item[open] summary::after { content: '\2212'; }
+.faq-item .faq-marker { font-size: 1.2rem; color: var(--navy); }
+.faq-item .faq-marker-open, .faq-item[open] .faq-marker-closed { display: none; }
+.faq-item[open] .faq-marker-open { display: inline; }
 .faq-item .faq-answer { padding: 0 20px 18px; color: var(--gray); }
 
 /* ---------- Contact ---------- */
