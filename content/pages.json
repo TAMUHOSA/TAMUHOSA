@@ -85,13 +85,80 @@
         {
           "type": "pageHero",
           "heading": "Events",
-          "lede": "Fundraisers, socials, volunteering, and NMDP drives — plus how many of each you need for eligibility."
+          "lede": "Pick a type of event to see this semester's dates, times, and locations."
+        },
+        {
+          "type": "cardGrid",
+          "eyebrow": "Browse by type",
+          "title": "Fall Events",
+          "lede": "To be eligible for competition, attend at least 10 events: 3 fundraising, 2 social, 3 volunteering, and 2 NMDP.",
+          "layout": "pillar",
+          "cards": [
+            {
+              "tag": "Attend 3",
+              "title": "Fundraising Events",
+              "body": "Profit shares, bake sales, and the mandatory GALA.",
+              "link": "events/fundraising.html",
+              "pillar": "none"
+            },
+            {
+              "tag": "Attend 2",
+              "title": "Social Events",
+              "body": "Tote bag painting, Midnight Yell, game night, and Top Golf.",
+              "link": "events/social.html",
+              "pillar": "none"
+            },
+            {
+              "tag": "Attend 3",
+              "title": "Volunteering Events",
+              "body": "Shifts with the Brazos Valley Food Bank, Aggieland Humane Society, and TAMU BUILD.",
+              "link": "events/volunteering.html",
+              "pillar": "none"
+            },
+            {
+              "tag": "Attend 2",
+              "title": "NMDP Volunteering Events",
+              "body": "Marrow-registry drives: World Marrow Donor Day, Aggies Tackling Cancer, and Give Thanks Give Life.",
+              "link": "events/nmdp.html",
+              "pillar": "none"
+            },
+            {
+              "tag": "Key dates",
+              "title": "Chapter Dates",
+              "body": "Informational sessions, Club Crawl, and the affiliation dues deadline.",
+              "link": "events/chapter-dates.html",
+              "pillar": "none"
+            }
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "alt": true,
+          "eyebrow": "Also see",
+          "title": "General meetings",
+          "lede": "Mandatory meetings are every other Tuesday at 5:30 pm.",
+          "buttons": [
+            {
+              "label": "Meeting Schedule & Slides",
+              "href": "membership/meetings.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events-fundraising",
+      "path": "events/fundraising.html",
+      "title": "Fundraising Events | TAMU HOSA",
+      "metaDescription": "TAMU HOSA fundraising events: profit shares, bake sales, and GALA.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "heading": "Fundraising Events",
+          "lede": "Attend at least 3 for eligibility."
         },
         {
           "type": "eventList",
-          "eyebrow": "Fundraising",
-          "title": "Fundraising Events",
-          "lede": "Attend at least 3 for eligibility.",
           "events": [
             {
               "month": "SEP",
@@ -152,10 +219,30 @@
           ]
         },
         {
+          "type": "ctaButtons",
+          "alt": true,
+          "buttons": [
+            {
+              "label": "← All Events",
+              "href": "events.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events-social",
+      "path": "events/social.html",
+      "title": "Social Events | TAMU HOSA",
+      "metaDescription": "TAMU HOSA social events: tote bag painting, Midnight Yell, game night, and Top Golf.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "heading": "Social Events",
+          "lede": "Attend at least 2 for eligibility."
+        },
+        {
           "type": "eventList",
-          "eyebrow": "Social",
-          "title": "Social Events",
-          "lede": "Attend at least 2 for eligibility.",
           "events": [
             {
               "month": "SEP",
@@ -189,14 +276,33 @@
               "body": "Details to be confirmed later. Reach out at least a month before. Counts toward the 2 social events needed for eligibility.",
               "date": "2026-11-20"
             }
-          ],
-          "alt": true
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "alt": true,
+          "buttons": [
+            {
+              "label": "← All Events",
+              "href": "events.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events-volunteering",
+      "path": "events/volunteering.html",
+      "title": "Volunteering Events | TAMU HOSA",
+      "metaDescription": "TAMU HOSA volunteering events with the Brazos Valley Food Bank, Aggieland Humane Society, and TAMU BUILD.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "heading": "Volunteering Events",
+          "lede": "Attend at least 3 for eligibility."
         },
         {
           "type": "eventList",
-          "eyebrow": "Service",
-          "title": "Volunteering Events",
-          "lede": "Attend at least 3 for eligibility.",
           "events": [
             {
               "month": "OCT",
@@ -249,10 +355,30 @@
           ]
         },
         {
+          "type": "ctaButtons",
+          "alt": true,
+          "buttons": [
+            {
+              "label": "← All Events",
+              "href": "events.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events-nmdp",
+      "path": "events/nmdp.html",
+      "title": "NMDP Volunteering Events | TAMU HOSA",
+      "metaDescription": "TAMU HOSA NMDP marrow-registry volunteering events on the Texas A&M campus.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "heading": "NMDP Volunteering Events",
+          "lede": "Attend at least 2 for eligibility."
+        },
+        {
           "type": "eventList",
-          "eyebrow": "NMDP",
-          "title": "NMDP Volunteering Events",
-          "lede": "Attend at least 2 for eligibility.",
           "events": [
             {
               "month": "SEP",
@@ -278,14 +404,33 @@
               "body": "Counts toward the 2 NMDP volunteering events needed for eligibility.",
               "date": "2026-11-18"
             }
-          ],
-          "alt": true
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "alt": true,
+          "buttons": [
+            {
+              "label": "← All Events",
+              "href": "events.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "events-chapter-dates",
+      "path": "events/chapter-dates.html",
+      "title": "Chapter Dates | TAMU HOSA",
+      "metaDescription": "Key TAMU HOSA chapter dates: informationals, Club Crawl, and the dues deadline.",
+      "sections": [
+        {
+          "type": "pageHero",
+          "heading": "Chapter Dates",
+          "lede": "Informationals, club events, and deadlines."
         },
         {
           "type": "eventList",
-          "eyebrow": "Chapter",
-          "title": "Chapter Dates",
-          "lede": "",
           "events": [
             {
               "month": "SEP",
@@ -314,6 +459,16 @@
               "meta": "Time: Midnight",
               "body": "Affiliation dues of $25 are due by midnight.",
               "date": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "type": "ctaButtons",
+          "alt": true,
+          "buttons": [
+            {
+              "label": "← All Events",
+              "href": "events.html"
             }
           ]
         }

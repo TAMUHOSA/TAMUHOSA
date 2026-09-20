@@ -23,8 +23,8 @@
   }
 
   function rootPrefix() {
-    // membership/*.html pages need ../ in front of every root-relative asset/link.
-    return location.pathname.indexOf('/membership/') !== -1 ? '../' : '';
+    // membership/*.html and events/*.html pages need ../ in front of every root-relative asset/link.
+    return /\/(membership|events)\//.test(location.pathname) ? '../' : '';
   }
 
   function resolveHref(href) {

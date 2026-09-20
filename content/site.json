@@ -20,20 +20,73 @@
     "borderStrong": "#bccbd1"
   },
   "nav": [
-    { "label": "Home", "href": "index.html" },
-    { "label": "Events", "href": "events.html" },
-    { "label": "Competitions", "href": "competitions.html" },
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Events",
+      "dropdown": [
+        {
+          "label": "All Events",
+          "href": "events.html"
+        },
+        {
+          "label": "Fundraising Events",
+          "href": "events/fundraising.html"
+        },
+        {
+          "label": "Social Events",
+          "href": "events/social.html"
+        },
+        {
+          "label": "Volunteering Events",
+          "href": "events/volunteering.html"
+        },
+        {
+          "label": "NMDP Volunteering Events",
+          "href": "events/nmdp.html"
+        },
+        {
+          "label": "Chapter Dates",
+          "href": "events/chapter-dates.html"
+        }
+      ]
+    },
+    {
+      "label": "Competitions",
+      "href": "competitions.html"
+    },
     {
       "label": "Membership",
       "dropdown": [
-        { "label": "Meetings", "href": "membership/meetings.html" },
-        { "label": "Dues (Flywire)", "href": "membership/flywire.html" },
-        { "label": "Member Points", "href": "membership/points.html" },
-        { "label": "NMDP Service Project", "href": "membership/nmdp.html" }
+        {
+          "label": "Meetings",
+          "href": "membership/meetings.html"
+        },
+        {
+          "label": "Dues (Flywire)",
+          "href": "membership/flywire.html"
+        },
+        {
+          "label": "Member Points",
+          "href": "membership/points.html"
+        },
+        {
+          "label": "NMDP Service Project",
+          "href": "membership/nmdp.html"
+        }
       ]
     },
-    { "label": "Officers", "href": "officers.html" },
-    { "label": "Contact", "href": "contact.html", "cta": true }
+    {
+      "label": "Officers",
+      "href": "officers.html"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html",
+      "cta": true
+    }
   ],
   "footer": {
     "tagline": "The Texas A&M chapter of HOSA — Future Health Professionals. Building leaders in the global health community through education, collaboration, and experience.",
@@ -42,19 +95,43 @@
       {
         "heading": "Explore",
         "links": [
-          { "label": "Events", "href": "events.html" },
-          { "label": "Competitions", "href": "competitions.html" },
-          { "label": "Membership", "href": "membership.html" },
-          { "label": "Officers", "href": "officers.html" }
+          {
+            "label": "Events",
+            "href": "events.html"
+          },
+          {
+            "label": "Competitions",
+            "href": "competitions.html"
+          },
+          {
+            "label": "Membership",
+            "href": "membership.html"
+          },
+          {
+            "label": "Officers",
+            "href": "officers.html"
+          }
         ]
       },
       {
         "heading": "Membership",
         "links": [
-          { "label": "Meetings", "href": "membership/meetings.html" },
-          { "label": "Dues", "href": "membership/flywire.html" },
-          { "label": "Points", "href": "membership/points.html" },
-          { "label": "NMDP", "href": "membership/nmdp.html" }
+          {
+            "label": "Meetings",
+            "href": "membership/meetings.html"
+          },
+          {
+            "label": "Dues",
+            "href": "membership/flywire.html"
+          },
+          {
+            "label": "Points",
+            "href": "membership/points.html"
+          },
+          {
+            "label": "NMDP",
+            "href": "membership/nmdp.html"
+          }
         ]
       }
     ]
