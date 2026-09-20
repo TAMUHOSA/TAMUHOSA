@@ -22,8 +22,13 @@
     meta.setAttribute('content', content);
   }
 
+  // Pages in a subfolder load this script as ../js/render.js, so the script's own src tells us
+  // how far up the site root is; the pathname check is just a fallback.
+  var scriptSrc = document.currentScript ? document.currentScript.getAttribute('src') || '' : '';
+
   function rootPrefix() {
     // membership/*.html and events/*.html pages need ../ in front of every root-relative asset/link.
+    if (scriptSrc) return scriptSrc.indexOf('../') === 0 ? '../' : '';
     return /\/(membership|events)\//.test(location.pathname) ? '../' : '';
   }
 
