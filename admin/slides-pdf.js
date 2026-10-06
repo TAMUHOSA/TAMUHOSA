@@ -103,8 +103,8 @@
         var files = jpegs.map(function (blob, i) {
           return { blob: blob, path: dir + '/slide-' + String(i + 1).padStart(2, '0') + '.jpg' };
         });
-        var backend = p.config.get('backend');
-        await commitFiles(backend.get('repo'), backend.get('branch') || 'main', files, 'Add slides from PDF: ' + file.name, set.bind(null));
+        var backend = p.config.get ? p.config.get('backend').toJS() : p.config.backend; // plain object in Decap 3
+        await commitFiles(backend.repo, backend.branch || 'main', files, 'Add slides from PDF: ' + file.name, set.bind(null));
         // Decap's list/map values are Immutable; clear() gives empty ones of the right type without importing it.
         var data = p.entry.get('data');
         var current = p.value || data.keySeq().toList().clear();
