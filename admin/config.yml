@@ -245,7 +245,7 @@ collections:
                       - { label: "Note below the slides (optional)", name: "note", widget: string, required: false }
                       - label: "Slides (in order)"
                         name: "slides"
-                        widget: list
+                        widget: slidesPdf
                         summary: "{{fields.alt}}"
                         fields:
                           - { label: "Slide image", name: "image", widget: image }
