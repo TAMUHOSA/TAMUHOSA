@@ -965,6 +965,67 @@
               "alt": "Meeting 1 slide 36 of 36"
             }
           ]
+        },
+        {
+          "type": "slideViewer",
+          "alt": true,
+          "slides": [
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-01.jpg",
+              "alt": "Slide 1 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-02.jpg",
+              "alt": "Slide 2 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-03.jpg",
+              "alt": "Slide 3 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-04.jpg",
+              "alt": "Slide 4 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-05.jpg",
+              "alt": "Slide 5 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-06.jpg",
+              "alt": "Slide 6 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-07.jpg",
+              "alt": "Slide 7 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-08.jpg",
+              "alt": "Slide 8 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-09.jpg",
+              "alt": "Slide 9 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-10.jpg",
+              "alt": "Slide 10 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-11.jpg",
+              "alt": "Slide 11 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-12.jpg",
+              "alt": "Slide 12 of 13"
+            },
+            {
+              "image": "images/meetings/hosa-2nd-fall-meeting/slide-13.jpg",
+              "alt": "Slide 13 of 13"
+            }
+          ],
+          "eyebrow": "Meeting 2",
+          "title": "2nd Fall General Meeting",
+          "lede": "We held a resume workshop and spoke with members about upcoming events! "
         }
       ]
     },
